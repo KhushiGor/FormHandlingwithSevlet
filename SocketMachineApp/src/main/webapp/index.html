@@ -9,9 +9,9 @@
 		<label>First Name :</label><input type ="text" pattern="[A-Za-z\s]{2,50}" name = "first_name"  required><br>
 		<label>Last Name :</label><input type ="text" pattern="[A-Za-z\s]{2,50}" name = "last_name" required><br>
 		<label>Select Socket type</label> <select name="socket_type" required>
-			<option>Type A</option>
-			<option>Type B</option>
-			<option>Type C</option>
+			<option value="typeA" >Type A</option>
+			<option value="typeB" >Type B</option>
+			<option value="typeC" >Type C</option>
 			</select><br>
 			<label>Quantity:</label><input type="number" name="quantity" min="1" required>
 			<button type="submit" name="submit" value="Submit">Submit</button>

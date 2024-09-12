@@ -21,6 +21,7 @@ public class SocketMachineApp extends HttpServlet
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
 		 String firstName = request.getParameter("first_name");
 		 String lastName = request.getParameter("last_name");
 		 String socketType = request.getParameter("socket_type");
@@ -29,13 +30,24 @@ public class SocketMachineApp extends HttpServlet
 	        if (quantityStr != null && !quantityStr.isEmpty()) {
 	            quantity = Integer.parseInt(quantityStr);
 	        }
-		response.getWriter().append(request.getContextPath());
-		 PrintWriter out = response.getWriter();
+	      int quote = 1;
+	      switch(socketType) {
+	      case "typeA" : quote = quantity * 10;
+	      break;
+	      case "typeB" : quote = quantity * 15;
+	      break;
+	      case "typeC" : quote = quantity * 20;
+	      break;
+	      }
+	        
+	      response.getWriter().append(request.getContextPath());
+			 PrintWriter out = response.getWriter();
 	        out.println("Form Data Received");
 	        out.println("First Name: " + firstName);
 	        out.println("Last Name: " + lastName);
 	        out.println("Socket Type: " + socketType);
 	        out.println("Quantity: " + quantity);
+	        out.println("Price Quote: " + quote);
 		
 		}
     

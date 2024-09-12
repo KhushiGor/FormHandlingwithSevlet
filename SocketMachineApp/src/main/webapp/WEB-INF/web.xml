@@ -13,6 +13,6 @@
 
 <servlet-mapping>
     <servlet-name>SocketMachineApp</servlet-name>
-    <url-pattern>/SocketMachineApp/*</url-pattern>
+    <url-pattern>/SocketMachineApp</url-pattern>
 </servlet-mapping>
 </web-app>
